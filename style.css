@@ -1,0 +1,328 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6c2bd4, #8c31b0);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+button {
+    background: gold;
+    border: none;
+    padding: 25px 30px;
+    font-size: 18px;
+    cursor: grab;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.course-description {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+}
+
+.description-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.description-column {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.description-column h3 {
+    color: gold;
+    border-bottom: 1px solid gold;
+    padding-bottom: 10px;
+}
+
+.description-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.description-column li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.description-column li:before {
+    content: "★";
+    color: gold;
+    position: absolute;
+    left: 0;
+}
+
+.price-item {
+    background: rgba(255, 215, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 24px;
+    color: gold;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    background: linear-gradient(135deg, #6c2bd4, #8c31b0);
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    border: 2px solid gold;
+    animation: popupShow 0.4s ease-out;
+}
+
+.popup-body {
+    color: white;
+    text-align: center;
+}
+
+.popup-body h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.highlight {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.contact-block {
+    margin: 30px 0;
+}
+
+.contact-block h3 {
+    margin-bottom: 10px;
+}
+
+.contact-button {
+    display: inline-block;
+    background: gold;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.contact-button:hover {
+    background: transparent;
+    color: gold;
+    border-color: gold;
+}
+
+.bonus {
+    font-style: italic;
+    margin-top: 30px;
+    color: gold;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: gold;
+}
+
+.site-footer {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    border-top: 1px solid gold;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.footer-column h3 {
+    color: gold;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.footer-column p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: gold;
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.telegram-link {
+    position: relative;
+}
+
+.telegram-link:hover::after {
+    content: "Написать МагуЖеньку";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.social-links .telegram-link img {
+    filter: drop-shadow(0 0 5px rgba(0, 136, 204, 0.5));
+}
+
+.social-links .telegram-link:hover img {
+    filter: drop-shadow(0 0 10px rgba(0, 136, 204, 0.8));
+}
+
+.footer-disclaimer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .description-container {
+        flex-direction: column;
+    }
+    
+    body {
+        padding: 20px;
+    }
+    
+    .footer-column {
+        flex: 100%;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
