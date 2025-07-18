@@ -21,3 +21,29 @@ setInterval(() => {
     timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     time--;
 }, 1000);
+
+// FAQ аккордеон
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+        // Закрываем все открытые элементы
+        faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
+        });
+        
+        // Переключаем текущий элемент
+        item.classList.toggle('active');
+    });
+});
+
+// Закрытие попапа при клике на оверлей
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+        popup.style.display = 'none';
+    }
+});
