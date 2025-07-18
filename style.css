@@ -9,6 +9,26 @@ body {
 
 header {
     margin-bottom: 50px;
+    position: relative;
+}
+
+.header-top {
+    margin-bottom: 30px;
+}
+
+.club-title {
+    font-size: 4em;
+    margin: 0;
+    color: gold;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    letter-spacing: 3px;
+}
+
+.club-subtitle {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: white;
+    font-style: italic;
 }
 
 button {
@@ -87,6 +107,91 @@ button:hover {
     color: gold;
     font-weight: bold;
     margin: 10px 0;
+}
+
+.testimonials {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.testimonials h2 {
+    color: gold;
+    margin-bottom: 30px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid gold;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.client-name {
+    color: gold;
+    font-weight: bold;
+}
+
+.faq {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.faq h2 {
+    color: gold;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.faq-question {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.faq-question:hover {
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.faq-answer {
+    padding: 15px;
+    display: none;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
 }
 
 .popup {
@@ -242,6 +347,7 @@ button:hover {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .social-links a {
@@ -324,5 +430,13 @@ button:hover {
     
     .social-links {
         justify-content: center;
+    }
+    
+    .club-title {
+        font-size: 2.5em;
+    }
+    
+    .club-subtitle {
+        font-size: 1.2em;
     }
 }
